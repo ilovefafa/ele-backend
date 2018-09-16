@@ -4,3 +4,4 @@ mongoose/account.js
 dist
 ssl
 session
+static
