@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":2,"key":{"_id":1},"name":"_id_","ns":"ele.tem-phone-auths"},{"v":2,"key":{"expireAt":1},"name":"expireAt_1","ns":"ele.tem-phone-auths","expireAfterSeconds":0,"background":true}],"uuid":"4401fd31eb0943f4b3075dae1bb53ae3"}
