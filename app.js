@@ -20,7 +20,7 @@ app.use(serve("."));
 app.use(serve("static/dist", { index: "index.html" }));
 //session
 app.keys = ["some secret hurr"];
-const session = require("./session/index");
+const session = require("koa-session");
 const CONFIG = {
   key: "koa:sess" /** (string) cookie key (default is koa:sess) */,
   /** (number || 'session') maxAge in ms (default is 1 days) */

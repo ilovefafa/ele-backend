@@ -7,3 +7,5 @@ let config = mongoose.connect(`mongodb://${account.username}:${account.password}
         console.log(err)
     })
 module.exports = config
+
+// `mongodb://zheng2154:a47447741@localhost:27017/ele`
