@@ -43,7 +43,7 @@ function sparateRouteFile(app) {
         findData = await User.find({ account })
         if (findData.length === 0) {
             let insert
-            insert = await User.insertMany({ [type]: account, password })
+            insert = await User.insertMany({ account, password })
             ctx.session = { id: insert[0].id }
             respone = {
                 code: 200,
@@ -51,7 +51,7 @@ function sparateRouteFile(app) {
                 data: { userInfo: insert[0].userInfo },
             }
         } else {
-            let compare = await bcrypt.compare(plainPassword, findData[0].password);
+            let compare = await bcrypt.compare(password, findData[0].password);
             if (compare) {
                 ctx.session = {
                     id: findData[0].id
