@@ -13,7 +13,22 @@ app.use(
 );
 //解决前端history
 const historyFallback = require('koa2-history-api-fallback')
-app.use(historyFallback())
+app.use(historyFallback({
+  rewrites: [
+    {
+      from: /\/static/,
+      to: function (context) {
+        return context.parsedUrl.pathname;
+      }
+    },
+    {
+      from: /\/api/,
+      to: function (context) {
+        return context.parsedUrl.pathname;
+      }
+    }
+  ]
+}))
 
 // 解析数据
 const koaBody = require("koa-body");
